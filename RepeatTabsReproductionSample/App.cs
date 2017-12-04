@@ -16,6 +16,13 @@ namespace RepeatTabsReproductionSample
 
             MainPage = CustomTabbedPage.Instance;
         }
+
+        protected override void OnResume()
+        {
+            base.OnResume();
+
+            Current.MainPage.DisplayAlert("OnResume Triggered", "", "OK");
+        }
     }
 
     class CustomTabbedPage : TabbedPage
